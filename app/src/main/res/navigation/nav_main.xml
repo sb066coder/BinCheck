@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main.xml"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="ru.sb066coder.bincheck.activity.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_to_binDetail"
+            app:destination="@id/binDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/binDetail"
+        android:name="ru.sb066coder.bincheck.activity.BinDetail"
+        android:label="fragment_bin_detail"
+        tools:layout="@layout/fragment_bin_detail">
+        <argument
+            android:name="Bin"/>
+    </fragment>
+</navigation>

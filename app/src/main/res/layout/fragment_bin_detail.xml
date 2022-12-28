@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BinDetail">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="BIN info:"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="110dp" />
+
+    <TextView
+        android:id="@+id/tvInfoTitle01"
+        style="@style/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        android:text="Card number length:"/>
+
+    <TextView
+        android:id="@+id/tvNumberLength"
+        style="@style/infoText"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTitle01"
+        app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle01"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:text="16"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvInfoTitle01, tvNumberLength"
+        />
+
+    <TextView
+        android:id="@+id/tvInfoTitle02"
+        style="@style/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/bar01"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        android:text="Card number luhn:"/>
+
+    <TextView
+        android:id="@+id/tvNumberLuhn"
+        style="@style/infoText"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTitle02"
+        app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle02"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:text="Yes"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvInfoTitle02, tvNumberLuhn"
+        />
+
+    <TextView
+        android:id="@+id/tvInfoTitle03"
+        style="@style/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/bar02"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        android:text="Scheme:"/>
+
+    <TextView
+        android:id="@+id/tvScheme"
+        style="@style/infoText"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTitle03"
+        app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle03"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:text="Visa"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvInfoTitle03, tvScheme"
+        />
+
+    <TextView
+        android:id="@+id/tvInfoTitle04"
+        style="@style/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/bar03"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        android:text="Type:"/>
+
+    <TextView
+        android:id="@+id/tvType"
+        style="@style/infoText"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTitle04"
+        app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle04"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:text="debit"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvInfoTitle04, tvType"
+        />
+
+    <TextView
+        android:id="@+id/tvInfoTitle05"
+        style="@style/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/bar04"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        android:text="Brand:"/>
+
+    <TextView
+        android:id="@+id/tvBrand"
+        style="@style/infoText"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTitle05"
+        app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle05"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:text="Visa/Dankort"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvInfoTitle05, tvBrand"
+        />
+
+    <TextView
+        android:id="@+id/tvInfoTitle06"
+        style="@style/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/bar05"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        android:text="Prepaid:"/>
+
+    <TextView
+        android:id="@+id/tvPrepaid"
+        style="@style/infoText"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTitle06"
+        app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle06"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:text="No"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvInfoTitle06, tvPrepaid"
+        />
+
+    <TextView
+        android:id="@+id/tvInfoTitle07"
+        style="@style/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/bar06"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        android:layout_marginTop="40dp"
+        android:text="Country:"/>
+
+    <TextView
+        android:id="@+id/tvCountry"
+        style="@style/infoText"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTitle07"
+        app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle07"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="🇩🇰Denmark\ncurrency: DKK\nlatitude: 56\nlongitude: 10"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvInfoTitle07, tvCountry"
+        />
+
+    <TextView
+        android:id="@+id/tvInfoTitle08"
+        style="@style/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/bar07"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        android:layout_marginTop="32dp"
+        android:text="Bank:"/>
+
+    <TextView
+        android:id="@+id/tvBankUrl"
+        style="@style/infoText"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTitle08"
+        app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle08"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Jyske Bank\nwww.jyskebank.dk\nHjørring"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvInfoTitle08, tvBankUrl"
+        />
+
+    <TextView
+        android:id="@+id/tvInfoTitle09"
+        style="@style/infoTitle"
+        app:layout_constraintTop_toBottomOf="@id/bar08"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        android:text="Phone:"/>
+
+    <TextView
+        android:id="@+id/tvBankPhone"
+        style="@style/infoText"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTitle09"
+        app:layout_constraintBottom_toBottomOf="@id/tvInfoTitle09"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="+4589893300"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bar09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvInfoTitle09, tvBankPhone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
